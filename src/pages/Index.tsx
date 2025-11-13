@@ -10,7 +10,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Calendar, Home, Users, Clock, CheckCircle, XCircle, AlertCircle, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-const API_BASE_URL = "http://localhost:8080/api";
+// File: src/pages/Index.tsx
+
+const API_BASE_URL = "https://ample-magic-production.up.railway.app/api";
 const EMPLOYEE_ID = 1;
 const ROOM_ID = 1;
 
