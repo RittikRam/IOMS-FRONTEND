@@ -32,7 +32,7 @@ interface Meeting {
   agenda: string;
   startTime: string;
   endTime: string;
-  room: { roomId: number };
+  room: { roomId: number } | null | undefined;
   organizerId: number;
 }
 
@@ -618,7 +618,7 @@ const Index = () => {
                         pendingLeaves.map((leave) => (
                           <TableRow key={leave.leaveId}>
                             <TableCell className="font-medium">{leave.leaveId}</TableCell>
-                            <TableCell>{leave.employee.employeeId}</TableCell>
+                            <TableCell>{leave.employee?.employeeId || 'N/A'}</TableCell>
                             <TableCell>
                               {new Date(leave.startDate).toLocaleDateString()} - {new Date(leave.endDate).toLocaleDateString()}
                             </TableCell>
